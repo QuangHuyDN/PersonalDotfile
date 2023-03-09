@@ -157,8 +157,8 @@ symbol = " "
 
 [git_branch]
 symbol = " "
-truncation_length = 4
-truncation_symbol = ''
+truncation_length = 10
+truncation_symbol = '...'
 ignore_branches = []
 
 [golang]
