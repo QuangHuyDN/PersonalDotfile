@@ -44,11 +44,6 @@ return require('packer').startup(function(use)
 	use{
 		"glepnir/lspsaga.nvim",
 		branch = "main",
-		requires = {
-			{"nvim-tree/nvim-web-devicons"},
-			--Please make sure you install markdown and markdown_inline parser
-			{"nvim-treesitter/nvim-treesitter"}
-		}
 	}
 	use 'nvim-lualine/lualine.nvim' -- Statusline
 	use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
@@ -60,7 +55,9 @@ return require('packer').startup(function(use)
 		end
     }
     use {
-        "nvim-telescope/telescope-file-browser.nvim",
-        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
     }
 end)
