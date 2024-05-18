@@ -4,13 +4,16 @@ return {
     optional = true,
     opts = {
       formatters_by_ft = {
-        ["python"] = { "black" },
+        python = { "black" },
+        lua = { "stylua" },
+        sh = { "shfmt" },
+        cpp = { "clang_format" },
       },
-      -- formatters = {
-      --   black = {
-      --     prepend_args = { "--line-length", "80" },
-      --   },
-      -- },
+      formatters = {
+        black = {
+          prepend_args = { "--line-length", "80" },
+        },
+      },
     },
   },
 }
